@@ -1,12 +1,125 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru">  
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
+    <title>Интернет-магазин "Техномарт" | Главная страница</title>
   </head>
+
   <body>
+    <header>
+      <div class="h-line">
+        <h1 hiden>Интернет-магазин "Техномарт"</h1>
+        <img src="" alt="Логотоп магазина">
+        <ul>
+          <li><form>
+            <input type="search" name="search" placeholder="Поиск:"> 
+            <input type="submit" value="Найти" hidden>
+          </form></li>          
+          <li><a class="bookmarks">Закладки:<span class="bookmarks-count">0</span></a></li>
+          <li><a class="cart">Корзина:<span class="cart-count">0</span></a></li>
+          <li><button type = "button" name = "order">Оформить заказ</button></li>
+        </ul> 
+      </div>
+      <section class="h-section">
+        <p class="shop">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
+        <div class="h-contacts">
+          <div class="telephone"><a href="tel:+78125550555" property="telephone">+7 (812) 555-05-55</a><br></div>
+          <address property="address" typeof="PostalAddress">
+            <span property="addressCountry" hidden>Россия</span>
+            <span property="postalCode" hidden>191186</span>
+            <span property="addressRegion" hidden>Ленинградская область</span>
+            <span property="addressLocality">г. Санкт-Петербург</span>, 
+            <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
+          </address>
+          <button type = "button" name = "login">Войти</button>
+          <button type = "button" name = "registration">Регистрация</button>
+        </div>
+      </section>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="blank.html">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="blank.html">Новости</a></li>
+          <li><a href="blank.html">Спецпредложения</a></li>
+          <li><a href="blank.html">Доставка</a></li>
+          <li><a href="blank.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <main>
+      <!-- Промо-блок («материалы», «инструмент», …) -->
+      <!-- Блок слайдера 'Каталог' -->
+      <!-- Блоки Скидки и Доставка -->
+      <!-- Блок Популярные товары -->
+      <!-- Блок Популярные производители -->
+      <!-- Блок Сервисы -->
+      <section class="about">
+        <div class="company-about">
+          <h2><span class="uppercase">Компания</span> «Техномарт»</h2>
+          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.<br>
+            <br>
+            Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+            Техномарт работает со многими транспортными компаниями:</p>
+          <ul>
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <button type = "button" name = "about" class="uppercase">Подробнее о компании</button>
+        </div>
+        <div class="company-contacts">
+          <h2><span class="uppercase">Контакты</span></h2>
+          <p>Вы можете забрать товар сами,<br>
+            заехав в наш офис:</p>
+          <a class="map">
+            <img src="" alt="Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
+          </a>
+          <button type = "button" name = "feedback" class="uppercase">Заблудились? Напишите нам!</button>
+        </div>
+      </section>
+    </main>
 
+    <footer>
+      <img src="" alt="Логотоп магазина">
+      <section class="f-section">
+        <div>        
+          <address property="address" typeof="PostalAddress">
+            <span property="addressCountry" hidden>Россия</span>
+            <span property="postalCode" hidden>191186</span>
+            <span property="addressRegion" hidden>Ленинградская область</span>
+            <span property="addressLocality">г. Санкт-Петербург</span>, 
+            <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
+          </address>
+          <a href="tel:+78125550555" property="telephone">+7 (812) 555-05-55</a>
+        </div>
+        <ul>
+          <li><a href="blank.html">Компания</a></li>
+          <li><a href="blank.html">Новости</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="blank.html">Доставка</a></li>
+          <li><a href="blank.html">Контакты</a></li>
+        </ul>
+        <ul>
+          <li><a href="blank.html">Материалы</a></li>
+          <li><a href="blank.html">Техника</a></li>
+          <li><a href="blank.html">Инструмент</a></li>
+          <li><a href="blank.html">Спецпредложения</a></li>
+        </ul>
+      </section>
+      <section class="f-line">
+        <p>© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
+        <div class="social">
+          <a class="social-vk" href="https://vk.com"></a>
+          <a class="social-fb" href="https://facebook.com"></a>
+          <a class="social-im" href="https://instagram.com"></a>
+        </div>
+        <dl>
+          <dt>Обратная связь:</dt><dd><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></dd>
+          <dt>Разработано</dt><dd><a href="https://htmlacademy.ru">htmlacademy.ru</a></dd>
+        </dl>
+      </section>
+    </footer>
   </body>
 </html>
