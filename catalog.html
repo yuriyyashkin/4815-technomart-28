@@ -12,8 +12,8 @@
         <img src="img/logo/logo-technomart-h.png" alt="Логотоп магазина" width="108" height="18">
         <input type="search" name="search" placeholder="Поиск:">
         <ul>
-          <li><a class="bookmarks">Закладки:<span class="bookmarks-count">0</span></a></li>
-          <li><a class="cart">Корзина:<span class="cart-count">10</span></a></li>
+          <li><a class="bookmarks">Закладки:<output class="bookmarks-count">0</output></a></li>
+          <li><a class="cart">Корзина:<output class="cart-count">10</output></a></li>
           <li><button type = "button" name = "order">Оформить заказ</button></li>
         </ul> 
       </div>
@@ -62,17 +62,10 @@
 
       <div class="filters">
         <form name="items-filter">
-          <div>Фильтр</div>>
+          <div>Фильтр</div>
           <p>Цена:</p>
           <div><!-- Ползунок --></div>
-          <input type="text" name="price-from"><p>—</p><input type="text" name="price-to">
-          
-          <!-- 
-            <fieldset>
-              <legend>Заголовок группы</legend>
-              <input type="text">
-            </fieldset>
-          -->
+          <input type="text" name="price-from"><input type="text" name="price-to">
           <div>
             <p class="uppercase">Производители:</p>
             <ul>
@@ -102,7 +95,7 @@
             <p class="uppercase">Питание:</p>
             <ul>
               <li>
-                <input type="radio" id="r-p0" name="category-param" value="0">
+                <input type="radio" id="r-p0" name="category-param" value="0" checked="checked">
                 <label for="r-p0">Аккумуляторные</label>
               </li>
               <li>         
@@ -121,12 +114,12 @@
         <div>
           <p>Сортировка</p>
           <div>
-            <label><input type="radio" name="group-select-sorting" value="price">По цене</label>
+            <label><input type="radio" name="group-select-sorting" value="price" checked="checked">По цене</label>
             <label><input type="radio" name="group-select-sorting" value="type">По типу</label>
             <label><input type="radio" name="group-select-sorting" value="function">По функционалу</label>
           </div>
           <div>
-            <input type="radio" name="group-select-ordering" value="ascending">
+            <input type="radio" name="group-select-ordering" value="ascending" checked="checked">
             <input type="radio" name="group-select-ordering" value="descending">
           </div>
         </div>
