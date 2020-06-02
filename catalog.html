@@ -22,9 +22,9 @@
         <div class="h-contacts">
           <div class="telephone"><a href="tel:+78125550555" property="telephone">+7 (812) 555-05-55</a><br></div>
           <address property="address" typeof="PostalAddress">
-            <span property="addressCountry" hidden>Россия</span>
-            <span property="postalCode" hidden>191186</span>
-            <span property="addressRegion" hidden>Ленинградская область</span>
+            <span property="addressCountry" class="visually-hidden">Россия</span>
+            <span property="postalCode" class="visually-hidden">191186</span>
+            <span property="addressRegion" class="visually-hidden">Ленинградская область</span>
             <span property="addressLocality">г. Санкт-Петербург</span>, 
             <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
           </address>
@@ -105,12 +105,17 @@
             </ul>
           </div>
           <div>
-            <button type="submit" class="apply-filter uppercase">Показать</button>
+            <button name="apply-filter" type="submit" class="apply-filter uppercase">Показать</button>
           </div>
         </form>
       </div>       
 
       <div class="catalog">
+        <div>
+          <button name="close-cart"></button>
+          <p>Товар добавлен в коризину</p>
+          <button name="order">Оформить заказ</button><button name="back">Продолжить покупки</button>
+        </div>
         <div>
           <p>Сортировка</p>
           <div>
@@ -127,84 +132,85 @@
           <ul>
             <li class="item">
               <img src="img/items/bosch-bfg-6000.png" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
+              <button name="to-order1" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks1" class="button-tobookmarks uppercase">В закладки</button>
               <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 6000</h3>
               <p class="oldprice uppercase">30500 р.</p>
-              <button class="button-price uppercase">25500 р.</button>
+              <a href="blank.html" class="button-price uppercase">25500 р.</a>
             </li>
             <li class="item">
               <img src="img/items/bosch-bfg-6000.png" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
+              <button name="to-order2" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks2" class="button-tobookmarks uppercase">В закладки</button>
               <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 6000</h3>
               <p class="oldprice uppercase">30500 р.</p>
-              <button class="button-price uppercase">25500 р.</button>
+              <a href="blank.html" class="button-price uppercase">25500 р.</a>
             </li>
             <li class="item new">
               <img src="img/items/bosch-bfg-6000.png" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
+              <button name="to-order3" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks3" class="button-tobookmarks uppercase">В закладки</button>
               <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 6000</h3>
               <p class="oldprice uppercase">30500 р.</p>
-              <button class="button-price uppercase">25500 р.</button>
-            </li>
-            <li class="item new">
-              <img src="img/items/bosch-bfg-3000.png" alt="Перфоратор Bosch BFG 3000" width="127" height="112">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
-              <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 3000</h3>
-              <p class="oldprice uppercase">22500 р.</p>
-              <button class="button-price uppercase">15500 р.</button>
-            </li>
-            <li class="item">
-              <img src="img/items/bosch-bfg-6000.png" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
-              <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 6000</h3>
-              <p class="oldprice uppercase">30500 р.</p>
-              <button class="button-price uppercase">25500 р.</button>
-            </li>
-            <li class="item new">
-              <img src="img/items/bosch-bfg-2000.png" alt="Перфоратор Bosch BFG 2000" width="127" height="112">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
-              <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 2000</h3>
-              <p class="oldprice uppercase"> </p>
-              <button class="button-price uppercase">12500 р.</button>
+              <a href="blank.html" class="button-price uppercase">25500 р.</a>
             </li>
             <li class="item new">
               <img src="img/items/bosch-bfg-3000.png" alt="Перфоратор Bosch BFG 3000" width="127" height="112">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
+              <button name="to-order4" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks4" class="button-tobookmarks uppercase">В закладки</button>
               <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 3000</h3>
               <p class="oldprice uppercase">22500 р.</p>
-              <button class="button-price uppercase">15500 р.</button>
+              <a href="blank.html" class="button-price uppercase">15500 р.</a>
             </li>
             <li class="item">
               <img src="img/items/bosch-bfg-6000.png" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
+              <button name="to-order5" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks5" class="button-tobookmarks uppercase">В закладки</button>
               <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 6000</h3>
               <p class="oldprice uppercase">30500 р.</p>
-              <button class="button-price uppercase">25500 р.</button>
+              <a href="blank.html" class="button-price uppercase">25500 р.</a>
+            </li>
+            <li class="item new">
+              <img src="img/items/bosch-bfg-2000.png" alt="Перфоратор Bosch BFG 2000" width="127" height="112">
+              <button name="to-order6" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks6" class="button-tobookmarks uppercase">В закладки</button>
+              <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 2000</h3>
+              <p class="oldprice uppercase"> </p>
+              <a href="blank.html" class="button-price uppercase">12500 р.</a>
+            </li>
+            <li class="item new">
+              <img src="img/items/bosch-bfg-3000.png" alt="Перфоратор Bosch BFG 3000" width="127" height="112">
+              <button name="to-order7" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks7" class="button-tobookmarks uppercase">В закладки</button>
+              <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 3000</h3>
+              <p class="oldprice uppercase">22500 р.</p>
+              <a href="blank.html" class="button-price uppercase">15500 р.</a>
+            </li>
+            <li class="item">
+              <img src="img/items/bosch-bfg-6000.png" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
+              <button name="to-order8" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks8" class="button-tobookmarks uppercase">В закладки</button>
+              <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 6000</h3>
+              <p class="oldprice uppercase">30500 р.</p>
+              <a href="blank.html" class="button-price uppercase">25500 р.</a>
             </li>
             <li class="item">
               <img src="img/items/bosch-bfg-2000.png" alt="Перфоратор Bosch BFG 2000" width="127" height="112">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
+              <button name="to-order9" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks9" class="button-tobookmarks uppercase">В закладки</button>
               <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 2000</h3>
               <p class="oldprice uppercase"> </p>
-              <button class="button-price uppercase">12500 р.</button>
+              <a href="blank.html" class="button-price uppercase">12500 р.</a>
             </li>
           </ul>
         </div>
         <div>
           <ul>
-						<li><button class="active">1</button></li>
-            <li><button>2</button></li>
-            <li><button>3</button></li>
-            <li><button>Следующая</button></li>
+            <li><button name="page-nprev" class="visually-hidden">Предыдущая</button></li>
+						<li><button name="page-n1" class="active">1</button></li>
+            <li><button name="page-n2">2</button></li>
+            <li><button name="page-n3">3</button></li>
+            <li><button name="page-nnext">Следующая</button></li>
 					</ul>
         </div>              
       </div>
@@ -224,9 +230,9 @@
       <div class="f-area">
         <div>        
           <address property="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <span property="addressCountry" hidden>Россия</span>
-            <span property="postalCode" hidden>191186</span>
-            <span property="addressRegion" hidden>Ленинградская область</span>
+            <span property="addressCountry" class="visually-hidden">Россия</span>
+            <span property="postalCode" class="visually-hidden">191186</span>
+            <span property="addressRegion" class="visually-hidden">Ленинградская область</span>
             <span property="addressLocality">г. Санкт-Петербург</span>, 
             <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
           </address>

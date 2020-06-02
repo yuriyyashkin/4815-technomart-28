@@ -8,7 +8,7 @@
   <body>
     <header>
       <div class="h-line">
-        <h1 class="hidden">Интернет-магазин "Техномарт"</h1>
+        <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
         <img src="img/logo/logo-technomart-h.png" alt="Логотоп магазина" width="108" height="18">
         <input type="search" name="search" placeholder="Поиск:" autocomplete="on">
         <ul>          
@@ -22,9 +22,9 @@
         <div class="h-contacts">
           <div class="telephone"><span property="telephone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></span><br></div>
           <address property="address" typeof="PostalAddress">
-            <span property="addressCountry" hidden>Россия</span>
-            <span property="postalCode" hidden>191186</span>
-            <span property="addressRegion" hidden>Ленинградская область</span>
+            <span property="addressCountry" class="visually-hidden">Россия</span>
+            <span property="postalCode" class="visually-hidden">191186</span>
+            <span property="addressRegion" class="visually-hidden">Ленинградская область</span>
             <span property="addressLocality">г. Санкт-Петербург</span>, 
             <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
           </address>
@@ -48,9 +48,9 @@
     <main>
       <div>
         <ul>
-          <li><p>Материалы</p><button>На любой вкус</button></li>
-          <li><p>Инструмент</p><button>На все случаи</button></li>
-          <li><p>Техника</p><button>Для стройки</button></li>
+          <li><p>Материалы</p><button name="matetials">На любой вкус</button></li>
+          <li><p>Инструмент</p><button name="intruments">На все случаи</button></li>
+          <li><p>Техника</p><button name="technics">Для стройки</button></li>
         </ul>
         <ul>
           <li>
@@ -71,43 +71,58 @@
       </div>
 
       <section>
+        <div class="popup-cart visually-hidden">
+          <button name="close-cart"></button>
+          <p>Товар добавлен в коризину</p>
+          <button name="order">Оформить заказ</button><button name="back">Продолжить покупки</button>
+        </div>
+        <div class="popup-map visually-hidden">
+          <button name="close-map"></button>
+          <img src="img/other/map-object-popup.png" alt="Карта" width="943" height="449">
+        </div>
+        <div class="popup-contactform visually-hidden">
+          <button name="close-contactform"></button>
+          <label>Ваше имя: <input type="text" name="contact-name" placeholder="Имя Фамилия"></label>
+          <label>Ваш e-mail: <input type="text" name="e-mail" placeholder="email@example.com"></label>
+          <label>Текст письма<textarea name="comment" placeholder="В свободной форме"></textarea></p></label>
+        </div>
         <div>
           <h2>Популярные товары</h2>
-          <button>Все популярные товары</button>
+          <a href="catalog.html?popular-items-all">Все популярные товары</a>
         </div>
         <div class="catalog-items">
           <ul>
             <li class="item">
               <img src="img/items/bosch-bfg-9000.png" alt="Перфоратор Bosch BFG 9000" width="184" height="164">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
+              <button name="to-order1" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks1" class="button-tobookmarks uppercase">В закладки</button>
               <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 9000</h3>
               <p class="oldprice uppercase">32500 р.</p>
-              <button class="button-price uppercase">25500 р.</button>
+              <a href="blank.html" class="button-price uppercase">25500 р.</a>
             </li>
             <li class="item new">
               <img src="img/items/bosch-bfg-3000.png" alt="Перфоратор Bosch BFG 3000" width="127" height="112">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
+              <button name="to-order2" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks2" class="button-tobookmarks uppercase">В закладки</button>
               <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 3000</h3>
               <p class="oldprice uppercase">22500 р.</p>
-              <button class="button-price uppercase">15500 р.</button>
+              <a href="blank.html" class="button-price uppercase">15500 р.</a>
             </li>
             <li class="item">
               <img src="img/items/bosch-bfg-6000.png" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
+              <button name="to-order3" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks3" class="button-tobookmarks uppercase">В закладки</button>
               <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 6000</h3>
               <p class="oldprice uppercase">30500 р.</p>
-              <button class="button-price uppercase">25500 р.</button>
+              <a href="blank.html" class="button-price uppercase">25500 р.</a>
             </li>
             <li class="item new">
               <img src="img/items/bosch-bfg-2000.png" alt="Перфоратор Bosch BFG 2000" width="127" height="112">
-              <button class="button-toorder uppercase">Купить</button>
-              <button class="button-tobookmarks uppercase">В закладки</button>
+              <button name="to-order4" class="button-toorder uppercase">Купить</button>
+              <button name="to-bookmarks4" class="button-tobookmarks uppercase">В закладки</button>
               <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 2000</h3>
               <p class="oldprice uppercase"></p>
-              <button class="button-price uppercase">12500 р.</button>
+              <a href="blank.html" class="button-price uppercase">12500 р.</a>
             </li>
           </ul>
         </div>
@@ -115,7 +130,7 @@
       <section>
         <div>
           <h2>Популярные производители</h2>
-          <button>Все производители</button>
+          <a href="catalog.html?popular-vendors-all">Все производители</a>
           <ul>
             <li class="vendor">
               <img src="img/logo/logo-bosch.png" alt="Bosch">
@@ -194,7 +209,7 @@
       </section>
 
       <section class="about">
-        <h2 class="hidden">О компании</h2>
+        <h2 class="visually-hidden">О компании</h2>
         <div class="company-about">
           <h2><span class="uppercase">Компания</span> «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.<br>
@@ -225,9 +240,9 @@
       <div class="f-area">
         <div>        
           <address property="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <span property="addressCountry" hidden>Россия</span>
-            <span property="postalCode" hidden>191186</span>
-            <span property="addressRegion" hidden>Ленинградская область</span>
+            <span property="addressCountry" class="visually-hidden">Россия</span>
+            <span property="postalCode" class="visually-hidden">191186</span>
+            <span property="addressRegion" class="visually-hidden">Ленинградская область</span>
             <span property="addressLocality">г. Санкт-Петербург</span>, 
             <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
           </address>
