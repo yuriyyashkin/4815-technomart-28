@@ -1,0 +1,122 @@
+:root{
+    --basic-black: #000000;
+    --basic-red: #EE3643;
+    --basic-white: #FFFFFF;
+    --basic-blue-b: #293449;
+    --basic-blue-p: #32425C;
+    --area-yellow1: #FFBF47;
+    --area-yellow2: #FFC047;
+    --area-blue: #3BBCE3;
+    --area-magenta: #DC91D8;
+    --area-caption-i: #F9F5F0;
+    --area-caption-c: #F7F3EC;
+    --area-caption2: #F2F6F8;
+    --area-section-i: #F1F5F7;
+    --area-section-c: rgba(0, 0, 0, 0.0001);
+    --menu-color-c1:#F1F5F7;
+    --text-color-c2:#F3F7F9;
+    --text-color-m: #FFD180;
+    --basic-green: #63A63E;
+    --item-border: #EAEAEA;
+    --temp-background:#fff;
+    --text-shodows: rgba(0, 0, 0, 0.25);
+    --basic-background: rgba(0, 0, 0, 0.0001);
+}
+
+@font-face{
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        url("/fonts/web/ptsans.woff2") format("woff2"),
+        url("/fonts/web/ptsans.woff") format("woff");
+}
+@font-face{
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        url("/fonts/web/ptsansbold.woff2") format("woff2"),
+        url("/fonts/web/ptsansbold.woff") format("woff");
+}
+
+
+body {
+    min-width: 940px;
+    margin: 0;
+    padding: 0;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-black);
+    background-color: var(--temp-background);
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a { text-decoration: none }
+
+.popup-cart, .popup-map, .popup-writeus, .visually-hidden {
+    display: none;
+    color: var(--basic-color, #000)
+}
+
+.h-line * {
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: var(--basic-blue-b);
+    color: var(--basic-white);
+}
+.h-line input::-moz-placeholder { color: var(--basic-white); }
+.h-line input::-webkit-input-placeholder { color: var(--basic-white); }
+.h-line ul { list-style: none }
+.h-line > a { background-color: var(--basic-red); }
+.h-line button { background-color: var(--basic-green); }
+
+.h-area { background-color: var(--basic-background); }
+.h-area p {
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--basic-red);
+    text-shadow: 0px 4px 4px var(--text-shodows);
+}
+.h-area button {
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 21px;
+    background-color: var(--basic-white);
+}
+.h-contacts a {
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    color: var(--basic-red);
+    border: 3px solid var(--basic-red);
+}
+.h-contacts a::before {
+    display: block;
+    content: ' ';
+    background-image: url('../img/art/icon-phone.svg');
+    background-size: 19px 19px;
+    height: 19px;
+    width: 19px;
+}
+

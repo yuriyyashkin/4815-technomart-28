@@ -3,24 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин "Техномарт" | Главная страница</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" >
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <div class="h-line">
         <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
-        <img src="img/logo/logo-technomart-h.png" alt="Логотоп магазина" width="108" height="18">
+        <a href="#"><img src="img/logo/logo-technomart-h.png" alt="Логотоп магазина" width="108" height="18"></a>
         <input type="search" name="search" placeholder="Поиск:" autocomplete="on">
         <ul>          
-          <li><a class="bookmarks">Закладки:<output class="bookmarks-count">0</output></a></li>
-          <li><a class="cart">Корзина:<output class="cart-count">0</output></a></li>
-          <li><button type = "button" name = "order">Оформить заказ</button></li>
+          <li><a class="bookmarks">Закладки: <output class="bookmarks-count">0</output></a></li>
+          <li><a class="cart">Корзина: <output class="cart-count"> 0</output></a></li>
+          <li><button type = "button" name = "order"> Оформить заказ</button></li>
         </ul>
       </div>
       <div class="h-area">
         <p class="shop">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
         <div class="h-contacts">
-          <div class="telephone"><span property="telephone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></span><br></div>
+          <span property="telephone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></span><br>
           <address property="address" typeof="PostalAddress">
             <span property="addressCountry" class="visually-hidden">Россия</span>
             <span property="postalCode" class="visually-hidden">191186</span>
@@ -56,12 +59,14 @@
           <li>
             <img src="img/other/slider-object-1.jpg" alt="Перфораторы" width="620" height="266">
             <p>Перфораторы</p>
-            <button>Настоящие мужские игрушки</button>
+            <p>Настоящие мужские игрушки</p>
+            <a href="catalog.html">Открыть каталог</a>
           </li>
           <li>
             <img src="img/other/slider-object-2.jpg" alt="Дрели" width="620" height="266">
             <p>Дрели</p>
-            <button>Соседям на радость!</button>
+            <p>Соседям на радость!</p>
+            <a href="catalog.html">Открыть каталог</a>
           </li>
         </ul>
         <ul>
@@ -82,7 +87,7 @@
             <button name="to-bookmarks1" class="button-tobookmarks uppercase">В закладки</button>
             <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 9000</h3>
             <p class="oldprice uppercase">32500 р.</p>
-            <a href="blank.html" class="button-price uppercase">25500 р.</a>
+            <p class="button-price uppercase">25500 р.</p>
           </li>
           <li class="item new">
             <img src="img/items/bosch-bfg-3000.png" alt="Перфоратор Bosch BFG 3000" width="127" height="112">
@@ -90,7 +95,7 @@
             <button name="to-bookmarks2" class="button-tobookmarks uppercase">В закладки</button>
             <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 3000</h3>
             <p class="oldprice uppercase">22500 р.</p>
-            <a href="blank.html" class="button-price uppercase">15500 р.</a>
+            <p class="button-price uppercase">15500 р.</p>
           </li>
           <li class="item">
             <img src="img/items/bosch-bfg-6000.png" alt="Перфоратор Bosch BFG 6000" width="144" height="128">
@@ -98,7 +103,7 @@
             <button name="to-bookmarks3" class="button-tobookmarks uppercase">В закладки</button>
             <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 6000</h3>
             <p class="oldprice uppercase">30500 р.</p>
-            <a href="blank.html" class="button-price uppercase">25500 р.</a>
+            <p class="button-price uppercase">25500 р.</p>
           </li>
           <li class="item new">
             <img src="img/items/bosch-bfg-2000.png" alt="Перфоратор Bosch BFG 2000" width="127" height="112">
@@ -106,7 +111,7 @@
             <button name="to-bookmarks4" class="button-tobookmarks uppercase">В закладки</button>
             <h3>Перфоратор <span class="uppercase">Bosch</span> BFG 2000</h3>
             <p class="oldprice uppercase"></p>
-            <a href="blank.html" class="button-price uppercase">12500 р.</a>
+            <p class="button-price uppercase">12500 р.</p>
           </li>
         </ul>
       </section>
@@ -216,19 +221,20 @@
       </section>
 
       <div class="popup-cart visually-hidden">
-        <button name="close-cart"></button>
+        <button name="close-cart" aria-label="Закрыть всплывающее окно корзины"></button>
         <p>Товар добавлен в коризину</p>
-        <button name="order">Оформить заказ</button><button name="back">Продолжить покупки</button>
+        <button name="submit-order">Оформить заказ</button><button name="back">Продолжить покупки</button>
       </div>
       <div class="popup-map visually-hidden">
-        <button name="close-map"></button>
+        <button name="close-map" aria-label="Закрыть всплывающее окно схемы проезда"></button>
         <img src="img/other/map-object-popup.png" alt="Карта" width="943" height="449">
       </div>
       <div class="popup-writeus visually-hidden">
-        <button name="close-contactform"></button>
+        <button name="close-writeus" aria-label="Закрыть всплывающее окно обратной связи"></button>
         <label>Ваше имя: <input type="text" name="contact-name" placeholder="Имя Фамилия"></label>
         <label>Ваш e-mail: <input type="text" name="e-mail" placeholder="email@example.com"></label>
         <label>Текст письма<textarea name="comment" placeholder="В свободной форме"></textarea></label>
+        <button name="submit-writeus">Отправить</button>
       </div>
     </main>
 
@@ -262,13 +268,13 @@
       <div class="f-line">
         <p>© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
         <div class="social">
-          <a class="social-vk" href="https://vk.com"></a>
-          <a class="social-fb" href="https://facebook.com"></a>
-          <a class="social-im" href="https://instagram.com"></a>
+          <a class="social-vk" href="https://vk.com" aria-label="Представительство в ВКонтакте"></a>
+          <a class="social-fb" href="https://facebook.com" aria-label="Представительство в Facebook"></a>
+          <a class="social-im" href="https://instagram.com" aria-label="Представительство в Instagram"></a>
         </div>
         <ul>
           <li>Обратная связь:<br><a href="mailto:mail@htmlacademy.ru" property="email">mail@htmlacademy.ru</a></li>
-          <li>Разработано -<br><a href="https://htmlacademy.ru">htmlacademy.ru</a></li>
+          <li>Разработано -<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></li>
         </ul>
       </div>
     </footer>
