@@ -1,9 +1,13 @@
 :root{
     --basic-black: #000000;
     --basic-red: #EE3643;
+    --basic-red-err: #BA2732;
     --basic-white: #FFFFFF;
+    --basic-white-opacity: rgba(255, 255, 255, 0.5);;
     --basic-blue-b: #293449;
     --basic-blue-p: #32425C;
+    --basic-blue-3: #161D29;
+    --basic-greylight: #c5c5c5;
     --area-yellow1: #FFBF47;
     --area-yellow2: #FFC047;
     --area-blue: #3BBCE3;
@@ -20,6 +24,7 @@
     --item-border: #EAEAEA;
     --temp-background:#fff;
     --text-shodows: rgba(0, 0, 0, 0.25);
+    --box-shodows: rgba(0, 0, 0, 0.24);
     --basic-background: rgba(0, 0, 0, 0.0001);
 }
 
@@ -29,17 +34,17 @@
     font-weight: 400;
     font-display: swap;
     src:
-        url("/fonts/web/ptsans.woff2") format("woff2"),
-        url("/fonts/web/ptsans.woff") format("woff");
+        url("../fonts/web/ptsans.woff2") format("woff2"),
+        url("../fonts/web/ptsans.woff") format("woff");
 }
 @font-face{
     font-family: "PT Sans";
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     font-display: swap;
     src:
-        url("/fonts/web/ptsansbold.woff2") format("woff2"),
-        url("/fonts/web/ptsansbold.woff") format("woff");
+        url("../fonts/web/ptsansbold.woff2") format("woff2"),
+        url("../fonts/web/ptsansbold.woff") format("woff");
 }
 
 
@@ -57,19 +62,23 @@ body {
 }
 
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+img { max-width: 100%; height: auto; }
 
-a { text-decoration: none }
+a { text-decoration: none; }
 
 .popup-cart, .popup-map, .popup-writeus, .visually-hidden {
     display: none;
     color: var(--basic-color, #000)
 }
 
-.h-line * {
+.page { height: 100%; }
+.page-body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+.header-line {
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -78,14 +87,79 @@ a { text-decoration: none }
     background-color: var(--basic-blue-b);
     color: var(--basic-white);
 }
-.h-line input::-moz-placeholder { color: var(--basic-white); }
-.h-line input::-webkit-input-placeholder { color: var(--basic-white); }
-.h-line ul { list-style: none }
-.h-line > a { background-color: var(--basic-red); }
-.h-line button { background-color: var(--basic-green); }
+.header-line ul { list-style: none }
+.header-line > a, .footer-area > a { background-color: var(--basic-red); }
+.header-line button { background-color: var(--basic-green); }
+.header-line .search { background-color: var(--basic-blue-b); border: 0px; }
+.header-line input {border: 0px; margin: 0px; padding: 0px; border-radius: 0px; background-color: var(--basic-blue-b);}
+.header-line input::-moz-placeholder { color: var(--basic-white); background-color: var(--basic-blue-b); opacity: 1;}
+.header-line input::-webkit-input-placeholder { color: var(--basic-white); background-color: var(--basic-blue-b);}
+.header-line input:focus::-moz-placeholder { color: var(--basic-black); background-color: var(--basic-white); opacity: 1; } 
+.header-line input:focus::-webkit-input-placeholder { color: var(--basic-black); background-color: var(--basic-white);}
 
-.h-area { background-color: var(--basic-background); }
-.h-area p {
+.search{position:relative;}
+.search::before{
+    display: block;
+    content: ' ';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-image: url("../img/art/icon-search.svg");
+    background-size: 17px 17px;
+    height: 17px; width: 17px;
+}
+
+.header-logo {
+    width: 220px;
+    height: 47px;
+    border-bottom: solid var(--basic-red-b);
+    box-shadow: inset 0px -5px 0px var(--box-shodows);
+}
+
+.address {
+    color: var(--basic-blue-p);
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.header-area {
+    min-height: 320px; width: auto;
+    background-color: var(--basic-background);
+    background-image: url("../img/art/top-background.png");
+}
+
+.navigation { border: 0px; height: 60px; width: 940px;}
+.navigation ul{ margin: 0; list-style: none;}
+.navigation a {
+    background-color: var(--basic-blue-b);
+    color: var(--basic-white);
+    padding: 2px;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px;
+}
+.navigation a:hover {
+    background-color: var(--basic-blue-3);
+    color: var(--basic-white);
+}
+.navigation a:active {
+    background-color: var(--basic-blue-3);
+    color: var(--basic-white-opacity);
+}
+
+.header-line button {
+    border: 0px;
+    background-color: var(--basic-green);
+    color: var(--basic-white);
+    border-radius: 0;
+}
+.header-line button:hover, .bookmarks:hover, .cart:hover {cursor: pointer;}
+.header-line button:active, .bookmarks:active, .cart:active { color: var(--basic-white-opacity); }
+
+.header-area p {
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: italic;
     font-weight: normal;
@@ -94,29 +168,155 @@ a { text-decoration: none }
     color: var(--basic-red);
     text-shadow: 0px 4px 4px var(--text-shodows);
 }
-.h-area button {
-    font-family: Cuprum;
+.header-area button {
+    font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 21px;
     line-height: 21px;
     background-color: var(--basic-white);
+    color: var(--basic-black);
+    border: 0;
 }
-.h-contacts a {
+.header-contacts a {
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
     line-height: 30px;
+    padding-left: 30px;
     color: var(--basic-red);
-    border: 3px solid var(--basic-red);
-}
-.h-contacts a::before {
-    display: block;
-    content: ' ';
-    background-image: url('../img/art/icon-phone.svg');
-    background-size: 19px 19px;
-    height: 19px;
-    width: 19px;
+    padding: 7px 109px 7px 5px;
+    border: 3px solid var(--basic-white);
 }
 
+.login { position:relative; }
+/*
+.login::before{
+    display: block;
+    content: ' ';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-image: url("../img/art/icon-login.svg");
+    background-size: auto auto;
+    height: 17px; width: 17px;
+}
+*/
+.login, .registration{
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic-black);
+    border-radius: 0px;
+}
+.login-button:hover, .registration-button:hover{
+    color: var(--basic-red);
+    cursor: pointer;
+}
+.login-button:active, .registration-button:active{
+    color: var(--basic-greylight);
+    cursor: pointer;
+}
+
+.header-contacts a { position:relative; }
+.header-contacts a::before {
+    display: block;
+    content: ' ';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-image: url("../img/art/icon-phone.svg");
+    background-size: auto auto;
+    height: 19px; width: 19px;
+}
+
+.advantages {
+    background-color: var(--basic-background);
+    border: 1px solid black;
+    min-height: 522px; width: 1200px;
+    background-image: url("../img/art/adv-background.png");
+    background-size: 522px, auto;    
+}
+.advantages-menu{
+    list-style: none;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    color: var(--basic-blue-p);
+}
+.advantages-menu li { color: var(--basic-white); background-color: var(--basic-blue-p); }
+.advantages-menu .checked { color: var(--basic-blue-p); background-color: var(--basic-white); }
+.advantages-menu li:hover { color: var(--basic-white); background-color: var(--basic-blue-b); cursor: pointer;}
+
+.advantages h2, .advantages h3, .about h3 {
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+}
+.advantages-description button, .about button{
+    background-color: var(--basic-white);
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+    border: 0px;
+}
+.advantages-description button, .about button {cursor: pointer;}
+
+.advantages p, .about p {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-black);
+}
+.company-about ul{
+    margin: 0; list-style: none;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/*
+- 2 слоя разной ширины или 2 строки заданной ширины?
+- изображение фоновое не отображается (см. выше)
+- у кнопок скругления странные дефолтные, убрать не удалось
+- inset?
+*/
+.footer-area {
+    background-color: var(--basic-blue-p);
+}
+.footer-logo {
+    width: 220px;
+    height: 47px;
+    border-bottom: solid var(--basic-red-b);
+    box-shadow: inset 0px -5px 0px var(--box-shodows);
+}
+.footer-area address {
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--text-color-c2);
+}
+.footer-line {
+    background-color: var(--basic-blue-b);
+
+}
