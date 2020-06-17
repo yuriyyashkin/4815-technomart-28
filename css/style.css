@@ -90,13 +90,14 @@ a { text-decoration: none; }
 .header-line ul { list-style: none }
 .header-line > a, .footer-area > a { background-color: var(--basic-red); }
 .header-line button { background-color: var(--basic-green); }
-.header-line .search { background-color: var(--basic-blue-b); border: 0px; }
-.header-line input {border: 0px; margin: 0px; padding: 0px; border-radius: 0px; background-color: var(--basic-blue-b);}
-.header-line input::-moz-placeholder { color: var(--basic-white); background-color: var(--basic-blue-b); opacity: 1;}
-.header-line input::-webkit-input-placeholder { color: var(--basic-white); background-color: var(--basic-blue-b);}
-.header-line input:focus::-moz-placeholder { color: var(--basic-black); background-color: var(--basic-white); opacity: 1; } 
-.header-line input:focus::-webkit-input-placeholder { color: var(--basic-black); background-color: var(--basic-white);}
-
+/* .header-line .search { background-color: var(--basic-blue-b); border: 0px; } */
+/* .header-line input {border: 0px; margin: 0px; padding: 0px; border-radius: 0px; background-color: var(--basic-blue-b);} */
+.header-line input {border: 0px; margin: 0px; padding: 0px; border-radius: 0px; background-color: var(--basic-blue-b)}
+.header-line input::-moz-placeholder { color: var(--basic-white); opacity: 1;}
+.header-line input::-webkit-input-placeholder { color: var(--basic-white); }
+.header-line input:focus { color: var(--basic-black); background-color: var(--basic-white); opacity: 1; } 
+/*.header-line input:focus::-webkit-input-placeholder { color: var(--basic-black); background-color: var(--basic-white);}
+*/
 .search{position:relative;}
 .search::before{
     display: block;
@@ -127,8 +128,7 @@ a { text-decoration: none; }
 
 .header-area {
     min-height: 320px; width: auto;
-    background-color: var(--basic-background);
-    background-image: url("../img/art/top-background.png");
+    background-color: var(--text-color-c2);
 }
 
 .navigation { border: 0px; height: 60px; width: 940px;}
@@ -155,6 +155,9 @@ a { text-decoration: none; }
     background-color: var(--basic-green);
     color: var(--basic-white);
     border-radius: 0;
+}
+.cart.full{
+    background-color: var(--basic-red);
 }
 .header-line button:hover, .bookmarks:hover, .cart:hover {cursor: pointer;}
 .header-line button:active, .bookmarks:active, .cart:active { color: var(--basic-white-opacity); }
@@ -191,6 +194,7 @@ a { text-decoration: none; }
 }
 
 .login { position:relative; }
+
 /*
 .login::before{
     display: block;
@@ -212,14 +216,24 @@ a { text-decoration: none; }
     color: var(--basic-black);
     border-radius: 0px;
 }
-.login-button:hover, .registration-button:hover{
+.login-button:hover, .registration-button:hover, .entered-menu a:hover{
     color: var(--basic-red);
     cursor: pointer;
 }
-.login-button:active, .registration-button:active{
+.login-button:active, .registration-button:active, .entered-menu a:active{
     color: var(--basic-greylight);
     cursor: pointer;
 }
+.entered-menu a{
+    color: var(--basic-blue-p);
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    border: 0;
+}
+
 
 .header-contacts a { position:relative; }
 .header-contacts a::before {
@@ -237,8 +251,6 @@ a { text-decoration: none; }
     background-color: var(--basic-background);
     border: 1px solid black;
     min-height: 522px; width: 1200px;
-    background-image: url("../img/art/adv-background.png");
-    background-size: 522px, auto;    
 }
 .advantages-menu{
     list-style: none;
@@ -272,7 +284,7 @@ a { text-decoration: none; }
     text-transform: uppercase;
     color: var(--basic-white);
     background-color: var(--basic-red);
-    border: 0px;
+    border: 0px; border-radius: 0px;
 }
 .advantages-description button, .about button {cursor: pointer;}
 
@@ -284,7 +296,18 @@ a { text-decoration: none; }
     line-height: 24px;
     color: var(--basic-black);
 }
-.company-about ul{
+
+.crumbs ul{
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    margin: 0; list-style: none;
+}
+.company-about ul {
     margin: 0; list-style: none;
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
@@ -292,13 +315,42 @@ a { text-decoration: none; }
     font-size: 18px;
     line-height: 24px;
 }
+main > h2{
+    color: var(--basic-blue-p);
+    background-color: var(--text-color-c2);
+    text-transform: uppercase;
+}
+.filters p{
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    color: var(--basic-black);
+    text-transform: uppercase; 
+}
+.filters ul{ margin: 0; list-style: none; }
+.filters li{ 
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    color: var(--basic-black);
+    text-transform: uppercase; 
+}
+.apply-filter {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--basic-black);
+    text-transform: uppercase; 
+    border: solid 1px;
+    background-color: var(--basic-white);
+}
 
-/*
-- 2 слоя разной ширины или 2 строки заданной ширины?
-- изображение фоновое не отображается (см. выше)
-- у кнопок скругления странные дефолтные, убрать не удалось
-- inset?
-*/
 .footer-area {
     background-color: var(--basic-blue-p);
 }
@@ -308,7 +360,21 @@ a { text-decoration: none; }
     border-bottom: solid var(--basic-red-b);
     box-shadow: inset 0px -5px 0px var(--box-shodows);
 }
-.footer-area address {
+.footer-area .contacts  {
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal; /*?*/
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--text-color-c2); /*?*/
+}
+.footer-line {
+    background-color: var(--basic-blue-b);
+
+}
+
+.footer-menu a {
+    margin: 0; list-style: none;
     font-family: "Cuprum", "Arial", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -316,7 +382,40 @@ a { text-decoration: none; }
     line-height: 24px;
     color: var(--text-color-c2);
 }
-.footer-line {
-    background-color: var(--basic-blue-b);
+.footer-menu-ext a {
+    margin: 0; list-style: none;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--text-color-m);
+}
+.footer-menu a:hover, .footer-menu-ext a:hover {
+    text-decoration: underline;
+}
+.footer-menu a:active, .footer-menu-ext a:active {
+    opacity: 0.5;
+}
 
+.footer-line > p {
+    margin: 0; list-style: none;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-white);
+}
+.footer-line li {
+    margin: 0; list-style: none;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-white);
+}
+.footer-line li > a {
+    color: var(--text-color-m);
 }

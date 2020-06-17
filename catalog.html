@@ -8,35 +8,36 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" >
   </head>
 
-  <body>
+  <body class="page-body">
     <header class="header">
       <div class="header-line">
-        <h1 class="hidden">Интернет-магазин "Техномарт"</h1>
-        <a href="index.html"><img src="img/logo/logo-technomart-h.svg" alt="Логотоп магазина" width="108" height="18"></a>
-        <input type="search" name="search" placeholder="Поиск:">
+        <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
+        <a href="index.html" class="header-logo"><img src="img/logo/logo-technomart-h.svg" alt="Логотоп магазина" width="108" height="18"></a>
+        <label class="search">&nbsp;<input type="search" name="search" placeholder="Поиск:" autocomplete="on"></label>
         <ul>
-          <li><a class="bookmarks" href="#">Закладки:<output class="bookmarks-count">0</output></a></li>
-          <li><a class="cart" href="#">Корзина:<output class="cart-count">10</output></a></li>
-          <li><button type = "button" name = "order">Оформить заказ</button></li>
+          <li><a class="bookmarks">Закладки: <output class="bookmarks-count">0</output></a></li>
+          <li><a class="cart full">Корзина: <output class="cart-count"> 10</output></a></li>
+          <li><button type = "button" name = "order"> Оформить заказ</button></li>
         </ul> 
       </div>
       <div class="header-area">
         <p class="shop">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
         <div class="header-contacts">
-          <div class="telephone"><a href="tel:+78125550555" property="telephone">+7 (812) 555-05-55</a><br></div>
-          <address property="address" typeof="PostalAddress">
+          <span property="telephone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></span><br>
+          <address property="address" typeof="PostalAddress" class="address">
             <span property="addressCountry" class="visually-hidden">Россия</span>
             <span property="postalCode" class="visually-hidden">191186</span>
             <span property="addressRegion" class="visually-hidden">Ленинградская область</span>
             <span property="addressLocality">г. Санкт-Петербург</span>, 
             <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
           </address>
-          <button type = "button" name = "logged">Равшан Джамшутович</button>
-          <ul>
-            <li><a href="#">Мои заказы</a></li>
-            <li><a href="#">Личный кабинет</a></li>
-          </ul>
         </div>
+        <label class="login entered">&nbsp;<button type = "button" name = "login" class="login-button">Равшан Джамшутович</button></label>
+        <!--края-->
+        <div class="entered-menu">
+          <a href="#">Мои заказы</a>
+          <a href="#">Личный кабинет</a>
+        <div>        
       </div>
       <nav class="navigation">
         <ul>
@@ -58,9 +59,9 @@
           <li>Инструмент</li>
           <li>Перфораторы</li>
         </ul>
-        <h2 class="uppercase">Перфораторы</h2>
       </div>
 
+      <h2>Перфораторы</h2>
       <div class="filters">
         <form name="items-filter" action="https://echo.htmlacademy.ru/">
           <div>Фильтр</div>
@@ -68,7 +69,7 @@
           <div><!-- Ползунок --></div>
           <input type="text" name="price-from"><input type="text" name="price-to">
           <div>
-            <p class="uppercase">Производители:</p>
+            <p>Производители:</p>
             <ul>
               <li>
                 <input type="checkbox" name="vendor-0" id="cheader-v0" value="0" checked="checked">
@@ -93,7 +94,7 @@
             </ul>
           </div>
           <div>
-            <p class="uppercase">Питание:</p>
+            <p>Питание:</p>
             <ul>
               <li>
                 <input type="radio" id="r-p0" name="category-param" value="0" checked="checked">
@@ -106,7 +107,7 @@
             </ul>
           </div>
           <div>
-            <button name="apply-filter" type="submit" class="apply-filter uppercase">Показать</button>
+            <button name="apply-filter" type="submit" class="apply-filter">Показать</button>
           </div>
         </form>
       </div>       
@@ -226,8 +227,8 @@
 
     <footer>
       <div class="footer-area">
-        <img src="img/logo/logo-technomart-f.svg" alt="Логотоп магазина" width="127" height="23">
-        <div>        
+        <a href="#" class="footer-logo"><img src="img/logo/logo-technomart-f.svg" alt="Логотоп магазина" width="127" height="23"></a>
+        <div class="contacts">      
           <address property="address" itemscope itemtype="http://schema.org/PostalAddress">
             <span property="addressCountry" class="visually-hidden">Россия</span>
             <span property="postalCode" class="visually-hidden">191186</span>
@@ -237,14 +238,14 @@
           </address>
           <a href="tel:+78125550555" property="telephone">+7 (812) 555-05-55</a>
         </div>
-        <ul>
+        <ul class="footer-menu">
           <li><a href="blank.html">Компания</a></li>
           <li><a href="blank.html">Новости</a></li>
           <li><a href="#.html">Каталог</a></li>
           <li><a href="blank.html">Доставка</a></li>
           <li><a href="blank.html">Контакты</a></li>
         </ul>
-        <ul>
+        <ul class="footer-menu-ext">
           <li><a href="blank.html">Материалы</a></li>
           <li><a href="blank.html">Техника</a></li>
           <li><a href="blank.html">Инструмент</a></li>
