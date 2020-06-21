@@ -11,14 +11,16 @@
   <body class="page-body">
     <header class="header">
       <div class="header-line">
-        <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
-        <a href="index.html" class="header-logo"><img src="img/logo/logo-technomart-h.svg" alt="Логотоп магазина" width="108" height="18"></a>
-        <label class="search">&nbsp;<input type="search" name="search" placeholder="Поиск:" autocomplete="on"></label>
-        <ul>
-          <li><a class="bookmarks">Закладки: <output class="bookmarks-count">0</output></a></li>
-          <li><a class="cart full">Корзина: <output class="cart-count"> 10</output></a></li>
-          <li><button type = "button" name = "order"> Оформить заказ</button></li>
-        </ul> 
+        <div class="header-line-items">
+          <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
+          <a href="index.html" class="header-logo"><img src="img/logo/logo-technomart-h.svg" alt="Логотоп магазина" width="108" height="18"></a>
+          <label class="search">&nbsp;<input type="search" name="search" placeholder="Поиск:" autocomplete="on"></label>
+          <ul>
+            <li><a class="bookmarks">Закладки: <output class="bookmarks-count">0</output></a></li>
+            <li><a class="cart full">Корзина: <output class="cart-count"> 10</output></a></li>
+            <li><button type = "button" name = "order"> Оформить заказ</button></li>
+          </ul> 
+        </div>
       </div>
       <div class="header-area">
         <p class="shop-catalog">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
@@ -32,8 +34,8 @@
             <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
           </address>
         </div>
-        <label class="login entered">&nbsp;<button type = "button" name = "login" class="login-button">Равшан Джамшутович</button></label>
-        <div>
+        <div class="cabinet">
+          <label class="login entered">&nbsp;<button type = "button" name = "login" class="login-button">Равшан Джамшутович</button></label>
           <a href="#" class="entered-menu">Мои заказы</a>
           <a href="#" class="entered-menu">Личный кабинет</a>
         <div>        
@@ -62,7 +64,7 @@
 
       <h2>Перфораторы</h2>
       <div class="filters">
-        <form name="items-filter" action="https://echo.htmlacademy.ru/">
+        <form name="items-filter" action="https://echo.htmlacademy.ru/" method="GET">
           <div>Фильтр</div>
           <p>Цена:</p>
           <div><!-- Ползунок --></div>
@@ -71,24 +73,24 @@
             <p>Производители:</p>
             <ul>
               <li>
-                <input type="checkbox" name="vendor-0" id="cheader-v0" value="0" checked="checked">
-                <label for="cheader-v0">Bosch</label>
+                <input type="checkbox" name="vendor-0" id="vendor-v0" value="0" checked="checked">
+                <label for="vendor-v0">Bosch</label>
               </li>
               <li>
-                <input type="checkbox" name="vendor-1" id="cheader-v1" value="1">
-                <label for="cheader-v0">Интерскол</label> 
+                <input type="checkbox" name="vendor-1" id="vendor-v1" value="1">
+                <label for="vendor-v0">Интерскол</label> 
               </li>
               <li>
-                <input type="checkbox" name="vendor-2" id="cheader-v2" value="2" checked="checked">
-                <label for="cheader-v0">Makita</label>
+                <input type="checkbox" name="vendor-2" id="vendor-v2" value="2" checked="checked">
+                <label for="vendor-v0">Makita</label>
               </li>
               <li>
-                <input type="checkbox" name="vendor-3" id="cheader-v3" value="3">
-                <label for="cheader-v0">Dewalt</label>
+                <input type="checkbox" name="vendor-3" id="vendor-v3" value="3">
+                <label for="vendor-v0">Dewalt</label>
               </li>
               <li>
-                <input type="checkbox" name="vendor-4" id="cheader-v4" value="4">
-                <label for="cheader-v0">Hitachi</label>
+                <input type="checkbox" name="vendor-4" id="vendor-v4" value="4">
+                <label for="vendor-v0">Hitachi</label>
               </li>
             </ul>
           </div>
