@@ -35,42 +35,42 @@
           </address>
         </div>
         <div class="cabinet">
-          <label class="login entered">&nbsp;<button type = "button" name = "login" class="login-button">Равшан Джамшутович</button></label>
+          <label class="entered">&nbsp;<button type = "button" name = "login" class="entered-button">Равшан Джамшутович</button></label>
           <a href="#" class="entered-menu">Мои заказы</a>
           <a href="#" class="entered-menu">Личный кабинет</a>
-        <div>        
+        </div>    
+        <nav class="navigation">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="">Компания</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="">Новости</a></li>
+            <li><a href="">Спецпредложения</a></li>
+            <li><a href="">Доставка</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </nav>    
       </div>
-      <nav class="navigation">
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="">Компания</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Спецпредложения</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Контакты</a></li>
-        </ul>
-      </nav>
     </header>
 
     <main>
-      <div class="crumbs">
-        <ul>
-          <li>Каталог</li>
-          <li>Инструмент</li>
-          <li>Перфораторы</li>
-        </ul>
-      </div>
-
+      <ul class="crumbs">
+        <li><a href="catalog.html?catalog1">Каталог &nbsp;</a></li>
+        <li><a href="catalog.html?catalog2">Инструмент &nbsp;</a></li>
+        <li><a href="catalog.html?catalog3">Перфораторы &nbsp;</a></li>
+      </ul>
       <h2>Перфораторы</h2>
+
       <div class="filters">
         <form name="items-filter" action="https://echo.htmlacademy.ru/" method="GET">
-          <div>Фильтр</div>
-          <p>Цена:</p>
-          <div><!-- Ползунок --></div>
-          <input type="text" name="price-from"><input type="text" name="price-to">
-          <div>
-            <p>Производители:</p>
+          <div class="filters-line">Фильтр</div>
+          <fieldset>
+            <legend>Цена:</legend>
+            <div><!-- Ползунок --></div>
+            <input type="text" name="price-from"><input type="text" name="price-to">
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
             <ul>
               <li>
                 <input type="checkbox" name="vendor-0" id="vendor-v0" value="0" checked="checked">
@@ -93,9 +93,9 @@
                 <label for="vendor-v0">Hitachi</label>
               </li>
             </ul>
-          </div>
-          <div>
-            <p>Питание:</p>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
             <ul>
               <li>
                 <input type="radio" id="r-p0" name="category-param" value="0" checked="checked">
@@ -106,25 +106,23 @@
                 <label for="r-p1">Сетевые</label>
               </li> 
             </ul>
-          </div>
-          <div>
-            <button name="apply-filter" type="submit" class="apply-filter">Показать</button>
-          </div>
+          </fieldset>
+          <button name="apply-filter" type="submit" class="apply-filter">Показать</button>
         </form>
       </div>       
 
       <div class="catalog">
-        <div>
+        <div class="sorting-line">
           <p>Сортировка</p>
-          <div>
-            <label><input type="radio" name="group-select-sorting" value="price" checked="checked">По цене</label>
-            <label><input type="radio" name="group-select-sorting" value="type">По типу</label>
-            <label><input type="radio" name="group-select-sorting" value="function">По функционалу</label>
-          </div>
-          <div>
+          <fieldset class="group-select-sorting" aria-label="Выбор атрибута сортировки">
+            <input type="radio" name="group-select-sorting" value="price" checked="checked" id="radio-price"><label for="radio-price">По цене</label>
+            <input type="radio" name="group-select-sorting" value="type" id="radio-type"><label for="radio-type">По типу</label>
+            <input type="radio" name="group-select-sorting" value="function" id="radio-function"><label for="radio-function">По функционалу</label>
+          </fieldset>
+          <fieldset aria-label="Выбор порядка сортировки">
             <input type="radio" name="group-select-ordering" value="ascending" checked="checked">
             <input type="radio" name="group-select-ordering" value="descending">
-          </div>
+          </fieldset>
         </div>
         <ul class="catalog-items">
           <li class="item">
@@ -201,8 +199,8 @@
           </li>
         </ul>
         
-        <ul>
-          <li><button name="page-nprev" class="visually-hidden">Предыдущая</button></li>
+        <ul class="catalog-pages">
+          <li><button name="page-nprev" class="page-none">Предыдущая</button></li>
           <li><button name="page-n1" class="active">1</button></li>
           <li><button name="page-n2">2</button></li>
           <li><button name="page-n3">3</button></li>
@@ -210,7 +208,7 @@
         </ul>           
       </div>
 
-      <article>
+      <article class="category-description">
         <h2>Пара слов о перфораторах</h2>
         <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>

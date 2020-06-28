@@ -53,38 +53,32 @@
     </header>
 
     <main>
-      <div>
-        <ul>
-          <li><p>Материалы</p><button name="matetials">На любой вкус</button></li>
-          <li><p>Инструмент</p><button name="intruments">На все случаи</button></li>
-          <li><p>Техника</p><button name="technics">Для стройки</button></li>
-        </ul>
-        <ul>
-          <li>
-            <img src="img/other/slider-object-1.jpg" alt="Перфораторы" width="620" height="266">
-            <p>Перфораторы</p>
-            <p>Настоящие мужские игрушки</p>
-            <a href="catalog.html">Открыть каталог</a>
-          </li>
-          <li>
-            <img src="img/other/slider-object-2.jpg" alt="Дрели" width="620" height="266">
-            <p>Дрели</p>
-            <p>Соседям на радость!</p>
-            <a href="catalog.html">Открыть каталог</a>
-          </li>
-        </ul>
-        <ul>
-          <li><p>Скидки 50%</p><button>На 350 товаров</button></li>
-          <li><p>Доставка</p><button>Бесплатно</button></li>
-        </ul>
-      </div>
+      <ul class="promo">
+        <li class="promo-card-lite"><p>Материалы</p><button name="matetials">На любой вкус</button></li>
+        <li class="promo-card-lite"><p>Инструмент</p><button name="intruments">На все случаи</button></li>
+        <li class="promo-card-lite"><p>Техника</p><button name="technics">Для стройки</button></li>
+        <li class="promo-card-lite"><p>Скидки 50%</p><button>На 350 товаров</button></li>
+        <li class="promo-card-lite"><p>Доставка</p><button>Бесплатно</button></li>
+        <li class="promo-card-big">
+          <img src="img/other/slider-object-1.jpg" alt="Перфораторы" width="620" height="266">
+          <p>Перфораторы</p>
+          <p>Настоящие мужские игрушки</p>
+          <a href="catalog.html">Открыть каталог</a>
+        </li>
+        <li class="promo-card-big item-visibility-hidden">
+          <img src="img/other/slider-object-2.jpg" alt="Дрели" width="620" height="266">
+          <p>Дрели</p>
+          <p>Соседям на радость!</p>
+          <a href="catalog.html">Открыть каталог</a>
+        </li>
+      </ul>
 
       <section>
-        <div>
+        <div class="line-popular">
           <h2>Популярные товары</h2>
           <a href="catalog.html?popular-items-all">Все популярные товары</a>
         </div>
-        <ul class="catalog-items">
+        <ul class="catalog-items-index">
           <li class="item">
             <img src="img/items/bosch-bfg-9000.png" alt="Перфоратор Bosch BFG 9000" width="184" height="164">
             <button name="to-order1" class="button-toorder uppercase">Купить</button>
@@ -120,49 +114,19 @@
         </ul>
       </section>
       <section>
-        <h2>Популярные производители</h2>
-        <a href="catalog.html?popular-vendors-all">Все производители</a>
-        <ul>
-          <li class="vendor">
-            <img src="img/logo/logo-bosch.png" alt="Bosch" width="126" height="37">
-            <button>Купить</button>
-            <button>В закладки</button>
-          </li>
-          <li class="vendor">
-            <img src="img/logo/logo-makita.png" alt="Makita" width="123" height="40">
-            <button>Купить</button>
-            <button>В закладки</button>
-          </li>
-          <li class="vendor">
-            <img src="img/logo/logo-dewalt.png" alt="DeWALT" width="146" height="44">
-            <button>Купить</button>
-            <button>В закладки</button>
-          </li>
-          <li class="vendor">
-            <img src="img/logo/logo-interskol.png" alt="Интерскол" width="200" height="88">
-            <button>Купить</button>
-            <button>В закладки</button>
-          </li>
-          <li class="vendor">
-            <img src="img/logo/logo-hitachi.png" alt="Hitachi" width="169" height="31">
-            <button>Купить</button>
-            <button>В закладки</button>
-          </li>
-          <li class="vendor">
-            <img src="img/logo/logo-lg.png" alt="LG" width="121" height="73">
-            <button>Купить</button>
-            <button>В закладки</button>
-          </li>
-          <li class="vendor">
-            <img src="img/logo/logo-aeg.png" alt="AEG" width="151" height="96">
-            <button>Купить</button>
-            <button>В закладки</button>
-          </li>
-          <li class="vendor new">
-            <img src="img/logo/logo-metabo.png" alt="Metabo" width="204" height="69">
-            <button>Купить</button>
-            <button>В закладки</button>
-          </li>
+        <div class="line-popular">
+          <h2>Популярные производители</h2>
+          <a href="catalog.html?popular-vendors-all">Все производители</a>
+        </div>
+        <ul class="catalog-vendors">
+          <li class="vendor"><a href="blank.html"><img src="img/logo/logo-bosch.png" alt="Bosch" width="126" height="37"></a></li>
+          <li class="vendor"><a href="blank.html"><img src="img/logo/logo-makita.png" alt="Makita" width="123" height="40"></a></li>
+          <li class="vendor"><a href="blank.html"><img src="img/logo/logo-dewalt.png" alt="DeWALT" width="146" height="44"></a></li>
+          <li class="vendor"><a href="blank.html"><img src="img/logo/logo-interskol.png" alt="Интерскол" width="200" height="88"></a></li>
+          <li class="vendor"><a href="blank.html"><img src="img/logo/logo-hitachi.png" alt="Hitachi" width="169" height="31"></a></li>
+          <li class="vendor"><a href="blank.html"><img src="img/logo/logo-lg.png" alt="LG" width="121" height="73"></a></li>
+          <li class="vendor"><a href="blank.html"><img src="img/logo/logo-aeg.png" alt="AEG" width="151" height="96"></a></li>
+          <li class="vendor"><a href="blank.html"><img src="img/logo/logo-metabo.png" alt="Metabo" width="204" height="69"></a></li>
         </ul>
       </section>
       <section class="advantages">
@@ -170,9 +134,9 @@
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <ul class="advantages-menu">
-          <li class="checked">Доставка</li>
-          <li>Гарантия</li>
-          <li>Кредит</li>
+          <li class="checked" tabindex="0">Доставка</li>
+          <li tabindex="0">Гарантия</li>
+          <li tabindex="0">Кредит</li>
         </ul>
         <div class="advantages-description">
           <h3>Доставка</h3>
