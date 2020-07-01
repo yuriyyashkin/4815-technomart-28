@@ -52,7 +52,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="main-area-index">
       <ul class="promo">
         <li class="promo-card-lite"><p>Материалы</p><button name="matetials">На любой вкус</button></li>
         <li class="promo-card-lite"><p>Инструмент</p><button name="intruments">На все случаи</button></li>
@@ -144,24 +144,23 @@
             к вашему подъезду совершенно бесплатно!<br>
             Ведь мы неплохо заработаем, <br>
             поднимая его на ваш этаж!</p>
-          <h3>Гарантия</h3>
-          <p>Если купленный у нас товар поломается или заискрит, <br>
+          <h3 class="item-visibility-hidden">Гарантия</h3>
+          <p class="item-visibility-hidden">Если купленный у нас товар поломается или заискрит, <br>
             а также в случае пожара, спровоцированного его возгоранием, <br>
             вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br>
             Дом уж восстановите как-нибудь сами.
           </p>
-          <h3>Кредит</h3>
-          <p>Залезть в долговую яму стало проще! <br>
+          <h3 class="item-visibility-hidden">Кредит</h3>
+          <p class="item-visibility-hidden">Залезть в долговую яму стало проще! <br>
              Кредитные консультанты придут вам на помощь.</p>
-          <button>Отправить заявку</button>
+          <button class="item-visibility-hidden">Отправить заявку</button>
         </div>
       </section>
 
       <section class="about">
-        <h2 class="visually-hidden">О компании</h2>
         <div class="company-about">
           <h3><span>Компания</span> «Техномарт»</h3>
-          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.<br>
+          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br>ремонта и строительства не оставит равнодушными любителей сэкономить на <br>гастарбайтерах.<br>
             <br>
             Мы можем доставить ваш товар в самые отдаленные точки России!<br>
             Техномарт работает со многими транспортными компаниями:</p>
@@ -203,30 +202,34 @@
 
     <footer>
       <div class="footer-area">
-        <a href="#" class="footer-logo"><img src="img/logo/logo-technomart-f.svg" alt="Логотоп магазина" width="127" height="23"></a>
-        <div class="footer-contacts">        
-          <address property="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <span property="addressCountry" class="visually-hidden">Россия</span>
-            <span property="postalCode" class="visually-hidden">191186</span>
-            <span property="addressRegion" class="visually-hidden">Ленинградская область</span>
-            <span property="addressLocality">г. Санкт-Петербург</span>, 
-            <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
-          </address>
-          <a href="tel:+78125550555" property="telephone">+7 (812) 555-05-55</a>
+        <div>
+          <a href="#" class="footer-logo"><img src="img/logo/logo-technomart-f.svg" alt="Логотоп магазина" width="127" height="23"></a>
+          <div class="footer-contacts">        
+            <address property="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <span property="addressCountry" class="visually-hidden">Россия</span>
+              <span property="postalCode" class="visually-hidden">191186</span>
+              <span property="addressRegion" class="visually-hidden">Ленинградская область</span>
+              <span property="addressLocality">г. Санкт-Петербург</span>, 
+              <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
+            </address>
+            <a href="tel:+78125550555" property="telephone">+7 (812) 555-05-55</a>
+          </div>
         </div>
-        <ul class="footer-menu">
-          <li><a href="blank.html">Компания</a></li>
-          <li><a href="blank.html">Новости</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="blank.html">Доставка</a></li>
-          <li><a href="blank.html">Контакты</a></li>
-        </ul>
-        <ul class="footer-menu-extended">
-          <li><a href="blank.html">Материалы</a></li>
-          <li><a href="blank.html">Техника</a></li>
-          <li><a href="blank.html">Инструмент</a></li>
-          <li><a href="blank.html">Спецпредложения</a></li>
-        </ul>
+        <div>
+          <ul class="footer-menu">
+            <li><a href="blank.html">Компания</a></li>
+            <li><a href="blank.html">Новости</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="blank.html">Доставка</a></li>
+            <li><a href="blank.html">Контакты</a></li>
+          </ul>
+          <ul class="footer-menu-extended">
+            <li><a href="blank.html">Материалы</a></li>
+            <li><a href="blank.html">Техника</a></li>
+            <li><a href="blank.html">Инструмент</a></li>
+            <li><a href="blank.html">Спецпредложения</a></li>
+          </ul>
+        </div>
       </div>
       <div class="footer-line">
         <p>© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
@@ -235,10 +238,8 @@
           <a class="social-fb" href="https://facebook.com" aria-label="Представительство в Facebook"></a>
           <a class="social-im" href="https://instagram.com" aria-label="Представительство в Instagram"></a>
         </div>
-        <ul>
-          <li>Обратная связь:<br><a href="mailto:mail@htmlacademy.ru" property="email">mail@htmlacademy.ru</a></li>
-          <li>Разработано -<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></li>
-        </ul>
+        <p>Обратная связь:<br><a href="mailto:mail@htmlacademy.ru" property="email">mail@htmlacademy.ru</a></p>
+        <p>Разработано -<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
       </div>
     </footer>
   </body>
