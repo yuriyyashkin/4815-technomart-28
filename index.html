@@ -11,48 +11,85 @@
   <body class="page-body">
     <header class="header">
       <div class="header-line">
-        <div class="header-line-items">
-          <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
-          <a href="#" class="header-logo"><img src="img/logo/logo-technomart-h.svg" alt="Логотоп магазина" width="108" height="18"></a>
-          <label class="search">&nbsp;<input type="search" name="search" placeholder="Поиск:" autocomplete="on"></label>
-          <ul>          
-            <li><a class="bookmarks">Закладки: <output class="bookmarks-count">0</output></a></li>
-            <li><a class="cart">Корзина: <output class="cart-count"> 0</output></a></li>
-            <li><button type = "button" name = "order"> Оформить заказ</button></li>
-          </ul>
+        <div class="wrapper">
+          <div class="header-line-items">
+            <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
+            <a href="#" class="header-logo"><img src="img/logo/logo-technomart-h.svg" alt="Логотоп магазина" width="108" height="18"></a>
+            <label class="search">&nbsp;
+              <input type="search" name="search" placeholder="Поиск:" autocomplete="on">
+              <span><svg class="search-svg" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+              </svg></span>
+            </label>
+            <ul class="header-line-buttons">          
+              <li><a class="bookmarks">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z" fill="white"/>
+                </svg>
+                <span>Закладки:<output class="bookmarks-count">&nbsp;0</output></span>
+                </a></li>
+              <li><a class="cart">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
+                  <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
+                  <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
+                </svg>
+                <span>Корзина:<output class="cart-count"> 0</output></span>
+                </a></li>
+              <li><button type = "button" name = "order"> Оформить заказ</button></li>
+            </ul>
+          </div>
         </div>
       </div>
+
       <div class="header-area">
-        <p class="shop-index">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
-        <div class="header-contacts">
-          <span property="telephone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></span><br>
-          <address property="address" typeof="PostalAddress" class="address">
-            <span property="addressCountry" class="visually-hidden">Россия</span>
-            <span property="postalCode" class="visually-hidden">191186</span>
-            <span property="addressRegion" class="visually-hidden">Ленинградская область</span>
-            <span property="addressLocality">г. Санкт-Петербург</span>, 
-            <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
-          </address>
+        <div class="wrapper">
+          <p class="shop-index">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
+          <div class="header-contacts">
+            <span property="telephone">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.572 18.985H14.631C10.502 18.497 7.474 16.577 5.272 14.121C3.062 11.66 1.318 8.49202 0.977997 4.22802V3.08402C1.056 2.31002 1.437 1.78002 1.876 1.32702C2.425 0.76602 3.25 0.0440198 4.002 0.0190198C4.556 0.00101977 5.502 0.39902 5.881 0.91802C6.21 1.36402 6.385 2.25702 6.537 2.92102C6.691 3.59202 7.042 4.56402 6.945 5.21002C6.797 6.21702 5.458 6.64402 5.066 7.37602C6.373 10.511 8.509 12.815 11.359 14.407C12.074 14.015 12.705 12.835 13.691 12.812C14.05 12.803 14.509 12.99 14.875 13.098C15.277 13.219 15.625 13.373 15.979 13.506C16.575 13.73 17.627 14.027 17.983 14.527C18.348 15.04 18.553 15.883 18.473 16.406C18.309 17.447 16.594 18.603 15.572 18.985Z" fill="#B7BFC8"/>
+              </svg>
+              <a href="tel:+78125550555">
+                +7 (812) 555-05-55
+              </a>
+            </span><br>
+            <address property="address" typeof="PostalAddress" class="address">
+              <span property="addressCountry" class="visually-hidden">Россия</span>
+              <span property="postalCode" class="visually-hidden">191186</span>
+              <span property="addressRegion" class="visually-hidden">Ленинградская область</span>
+              <span property="addressLocality">г. Санкт-Петербург</span>, 
+              <span property="streetAddress">ул. Б. Конюшенная, д. 19/8</span>
+            </address>
+          </div>
+          <div class="cabinet">
+            <label class="login">
+              <button type = "button" name = "login" class="login-button">Войти</button>
+              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.1667 9L5.71429 0.5V6.5H0V11.5H5.71429V17.5L14.1667 9Z" fill="#C5C5C5"/>
+                <path d="M16.1771 15.51H11.3895V17.5H16.1771C18.2514 17.5 19.0381 15.69 19.0619 14.474V3.528C19.0381 2.311 18.2514 0.5 16.1771 0.5H11.3895V2.49H16.1771C16.9762 2.49 17.1219 3.171 17.1391 3.547V14.451C17.1229 14.827 16.9762 15.51 16.1771 15.51Z" fill="#C5C5C5"/>
+              </svg>                
+            </label>
+            <label class="registration">&nbsp;<button type = "button" name = "registration" class="registration-button">Регистрация</button></label>
+          </div>
+          <nav class="navigation">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="blank.html">Компания</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
+              <li><a href="blank.html">Новости</a></li>
+              <li><a href="blank.html">Спецпредложения</a></li>
+              <li><a href="blank.html">Доставка</a></li>
+              <li><a href="blank.html">Контакты</a></li>
+            </ul>
+          </nav>
+          </div>
         </div>
-        <div class="cabinet">
-          <label class="login">&nbsp;<button type = "button" name = "login" class="login-button">Войти</button></label>
-          <label class="registration">&nbsp;<button type = "button" name = "registration" class="registration-button">Регистрация</button></label>
-        </div>
-        <nav class="navigation">
-          <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="blank.html">Компания</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="blank.html">Новости</a></li>
-            <li><a href="blank.html">Спецпредложения</a></li>
-            <li><a href="blank.html">Доставка</a></li>
-            <li><a href="blank.html">Контакты</a></li>
-          </ul>
-        </nav>
       </div>
     </header>
 
     <main class="main-area-index">
+    <div class="wrapper">
       <ul class="promo">
         <li class="promo-card-lite"><p>Материалы</p><button name="matetials">На любой вкус</button></li>
         <li class="promo-card-lite"><p>Инструмент</p><button name="intruments">На все случаи</button></li>
@@ -198,6 +235,7 @@
         <label>Текст письма<textarea name="comment" placeholder="В свободной форме"></textarea></label>
         <button name="submit-writeus">Отправить</button>
       </div>
+    </div>
     </main>
 
     <footer>
